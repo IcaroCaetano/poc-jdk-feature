@@ -10,7 +10,7 @@ public class UserTest {
     void shouldCreateUserRecord() {
         User user = new User("Icaro", 30);
 
-        assertEquals("Icaro", user.name());
+        assertEquals("ICARO", user.name());
         assertEquals(30, user.age());
     }
 
@@ -26,5 +26,12 @@ public class UserTest {
         User user = new User("Icaro", 30);
 
         assertTrue(user.isAdult());
+    }
+
+    @Test
+    void shouldTransformNameToUpperCase() {
+        User user = new User("icaro", 30);
+
+        assertEquals("ICARO", user.name());
     }
 }
