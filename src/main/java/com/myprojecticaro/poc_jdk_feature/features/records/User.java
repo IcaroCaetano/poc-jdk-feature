@@ -7,4 +7,9 @@ public record User(String name, int age) {
             throw new IllegalArgumentException("Age cannot be negative");
         }
     }
+
+
+    public boolean isAdult() {
+        return age >= 18;
+    }
 }
