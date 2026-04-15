@@ -3,6 +3,7 @@ package com.myprojecticaro.poc_jdk_feature.features.records;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class UserTest {
 
@@ -12,5 +13,12 @@ public class UserTest {
 
         assertEquals("Icaro", user.name());
         assertEquals(30, user.age());
+    }
+
+    @Test
+    void shouldThrowExceptionWhenAgeIsInvalid() {
+        assertThrows(IllegalArgumentException.class, () ->
+                new User("Icaro", -1)
+        );
     }
 }
