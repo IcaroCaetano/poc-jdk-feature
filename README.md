@@ -8,4 +8,3 @@ A concise way to declare immutable classes for data transport (DTOs).
 
 Allows you to restrict which classes can inherit from a class/interface.
 
-tggg
